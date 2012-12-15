@@ -1,10 +1,12 @@
-# grunt-handlebars
+# grunt-emberify: Precompile your Ember Handlebars and assign to Ember.TEMPLATES
 
-Precompile handlebars templates. Written in 100% pure JS.
+Precompile handlebars templates to a single JS file where templates are saved to Ember.TEMPLATES.
 
 ## Getting Started
 
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-handlebars-js`
+Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with:
+
+    npm install grunt-emberify
 
 Then add this line to your project's `grunt.js` gruntfile:
 
@@ -13,14 +15,14 @@ Usage:
 
   grunt.initConfig({
       handlebars: {
-          'dest.js': [ 'client/lib/**.handlebars' ]
+          'allMyTemplates.js': [ 'client/lib/**.handlebars' ]
       },
 
       /* ... */
 
   });
 
-  grunt.loadNpmTasks('grunt-handlebars-js');
+  grunt.loadNpmTasks('grunt-emberify');
 ```
 
 [grunt]: http://gruntjs.com/
@@ -29,11 +31,6 @@ Usage:
 ## Documentation
 _(Coming soon)_
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2012 Karl Gyllstrom  

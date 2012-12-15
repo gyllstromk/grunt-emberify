@@ -1,18 +1,18 @@
 {
-  "name": "grunt-handlebars-js",
-  "description": "Precompile handlebars templates.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/gyllstromk/grunt-handlebars-js",
+  "name": "grunt-emberify",
+  "description": "Precompile handlebars templates and concatenate all Ember files.",
+  "version": "0.1.2",
+  "homepage": "https://github.com/gyllstromk/grunt-emberify",
   "author": {
     "name": "Karl Gyllstrom",
     "email": "karl.gyllstrom@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karl/grunt-handlebars-js.git"
+    "url": "git://github.com/gyllstromk/grunt-emberify.git"
   },
   "bugs": {
-    "url": "https://github.com/karl/grunt-handlebars-js/issues"
+    "url": "https://github.com/gyllstromk/grunt-emberify/issues"
   },
   "licenses": [
     {
@@ -21,7 +21,7 @@
     }
   ],
   "main": "grunt.js",
-  "bin": "bin/grunt-handlebars-js",
+  "bin": "bin/grunt-emberify",
   "engines": {
     "node": "*"
   },

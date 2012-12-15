@@ -1,6 +1,6 @@
 # grunt-handlebars
 
-Precompile handlebars templates.
+Precompile handlebars templates. Written in 100% pure JS.
 
 ## Getting Started
 

@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         fs.writeFile(this.target, grunt.utils._.keys(templates).map(function(templateName) {
             // grunt underscore library is old. should use `pairs`
 
-            return util.format('Ember.TEMPLATES[\'%s\'] = %s\n', templateName,
+            return util.format('Ember.TEMPLATES[\'%s\'] = %s;\n', templateName,
                 templates[templateName]);
         }), this.async());
     });

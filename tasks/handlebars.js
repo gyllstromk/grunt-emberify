@@ -8,6 +8,7 @@
 
 module.exports = function(grunt) {
     var Handlebars = require('handlebars');
+
     var fs = require('fs'),
         util = require('util'),
         path = require('path');
@@ -22,14 +23,15 @@ module.exports = function(grunt) {
                     'Multiple templates with name "%s" (%s)', templateName, each));
             }
 
-            templates[templateName] =
-                Handlebars.precompile(fs.readFileSync(each).toString());
+            templates[templateName] = 
+                Handlebars.precompile(fs.readFileSync(each).toString()).toString();
         });
 
         fs.writeFile(this.target, grunt.utils._.keys(templates).map(function(templateName) {
             // grunt underscore library is old. should use `pairs`
 
-            return util.format('Ember.TEMPLATES[\'%s\'] = %s;\n', templateName,
+            return util.format('Ember.TEMPLATES[\'%s\'] = ' +
+                'Ember.Handlebars.template(%s);\n', templateName,
                 templates[templateName]);
         }), this.async());
     });

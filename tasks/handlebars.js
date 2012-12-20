@@ -30,9 +30,9 @@ module.exports = function(grunt) {
             // grunt underscore library is old. should use `pairs`
 
             return util.format('Ember.TEMPLATES[\'%s\'] = ' +
-                'Ember.Handlebars.template(%s);\n', templateName,
+                'Ember.Handlebars.template(%s);', templateName,
                 templates[templateName]);
-        }));
+        }).join('\n'));
 
         this.async()();
     });

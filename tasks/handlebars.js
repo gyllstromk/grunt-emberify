@@ -9,8 +9,7 @@
 module.exports = function(grunt) {
     var Handlebars = require('handlebars');
 
-    var fs = require('fs'),
-        util = require('util'),
+    var util = require('util'),
         path = require('path');
 
     grunt.registerMultiTask('handlebars', 'Precompile Handlebars templates', function() {
@@ -24,10 +23,10 @@ module.exports = function(grunt) {
             }
 
             templates[templateName] = 
-                Handlebars.precompile(fs.readFileSync(each).toString()).toString();
+                Handlebars.precompile(grunt.file.read(each)).toString();
         });
 
-        fs.writeFile(this.target, grunt.utils._.keys(templates).map(function(templateName) {
+        grunt.file.write(this.target, grunt.utils._.keys(templates).map(function(templateName) {
             // grunt underscore library is old. should use `pairs`
 
             return util.format('Ember.TEMPLATES[\'%s\'] = ' +

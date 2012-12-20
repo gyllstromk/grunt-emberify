@@ -32,6 +32,8 @@ module.exports = function(grunt) {
             return util.format('Ember.TEMPLATES[\'%s\'] = ' +
                 'Ember.Handlebars.template(%s);\n', templateName,
                 templates[templateName]);
-        }), this.async());
+        }));
+
+        this.async()();
     });
 };

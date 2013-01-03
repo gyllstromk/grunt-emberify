@@ -21,7 +21,9 @@
     }
   ],
   "main": "grunt.js",
-  "bin": "bin/grunt-emberify",
+  "bin": {
+    "grunt-emberify": "bin/grunt-emberify"
+  },
   "engines": {
     "node": "*"
   },

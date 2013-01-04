@@ -14,7 +14,21 @@ Usage:
 ```js
 
   grunt.initConfig({
-      handlebars: {
+      handlebars_embed: {
+
+      // includes templates as:
+      // Ember.TEMPLATES[<name>] = Ember.Handlebars.compile(<template content>);
+
+          'allMyTemplates.js': [ 'client/lib/**.handlebars' ]
+      },
+
+      /* ... OR ... */
+
+      handlebars_precompile: {
+
+      // Precompiles templates.
+      // Includes as:
+      // Ember.TEMPLATES[<name>] = Ember.Handlebars.precompile(<preompiled content>);
           'allMyTemplates.js': [ 'client/lib/**.handlebars' ]
       },
 
@@ -27,10 +41,6 @@ Usage:
 
 [grunt]: http://gruntjs.com/
 [getting_started]: https://github.com/gruntjs/grunt/blob/master/docs/getting_started.md
-
-## Documentation
-_(Coming soon)_
-
 
 ## License
 Copyright (c) 2012 Karl Gyllstrom  

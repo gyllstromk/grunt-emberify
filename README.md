@@ -26,9 +26,10 @@ Usage:
 
       handlebars_precompile: {
 
-      // Precompiles templates.
+      // Compiles templates.
       // Includes as:
-      // Ember.TEMPLATES[<name>] = Ember.Handlebars.precompile(<preompiled content>);
+      // Ember.TEMPLATES[<name>] = Ember.Handlebars.template(<compiled content>);
+
           'allMyTemplates.js': [ 'client/lib/**.handlebars' ]
       },
 
